@@ -287,10 +287,10 @@ static NSTimeInterval const kDefaultLoadingTimeout = 15;
         return nil;
     }
 
-    //NSParameterAssert(requestFrom < responseTo);
-    if (requestFrom >= responseTo) {
-        return nil;
-    }
+//  NSParameterAssert(requestFrom < responseTo);
+//     if (requestFrom >= responseTo) {
+//         return nil;
+//     }
 
     NSParameterAssert(data.length > requestFrom - responseFrom);
     if (data.length <= requestFrom - responseFrom) {
