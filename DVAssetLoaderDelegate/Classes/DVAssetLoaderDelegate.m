@@ -154,7 +154,7 @@ static NSTimeInterval const kDefaultLoadingTimeout = 15;
 - (void)resourceLoader:(AVAssetResourceLoader *)resourceLoader didCancelLoadingRequest:(AVAssetResourceLoadingRequest *)loadingRequest {
     NSUInteger index = [self.pendingRequests indexOfObject:loadingRequest];
 
-    NSParameterAssert(index != NSNotFound);
+    // NSParameterAssert(index != NSNotFound);
     if (index == NSNotFound) {
         return;
     }
@@ -171,7 +171,7 @@ static NSTimeInterval const kDefaultLoadingTimeout = 15;
      completionHandler:(void (^)(NSURLSessionResponseDisposition disposition))completionHandler {
     NSUInteger index = [self.dataTasks indexOfObject:dataTask];
 
-    NSParameterAssert(index != NSNotFound);
+    // NSParameterAssert(index != NSNotFound);
     if (index == NSNotFound) {
         return;
     }
@@ -195,7 +195,7 @@ static NSTimeInterval const kDefaultLoadingTimeout = 15;
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
     NSUInteger index = [self.dataTasks indexOfObject:dataTask];
 
-    NSParameterAssert(index != NSNotFound);
+    // NSParameterAssert(index != NSNotFound);
     if (index == NSNotFound) {
         return;
     }
